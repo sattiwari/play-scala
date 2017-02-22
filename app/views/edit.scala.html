@@ -1,0 +1,12 @@
+@(personForm: Form[Person])(implicit messages: Messages)
+
+@import helper._
+
+@helper.form(action = routes.PersonController.save) {
+    <fieldset>
+        @helper.inputText(personForm("id"))
+        @helper.inputText(personForm("name"))
+    </fieldset>
+    <p><input type="submit"></p>
+
+}

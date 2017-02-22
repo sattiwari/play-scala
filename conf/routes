@@ -11,3 +11,8 @@ GET     /message                    controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+#forms demo
+GET          /persons/new           controllers.PersonController.newPerson
+GET          /persons/:id           controllers.PersonController.show(id: Long)
+POST         /persons               controllers.PersonController.save
